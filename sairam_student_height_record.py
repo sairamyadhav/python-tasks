@@ -1,5 +1,6 @@
 # student height record system
 
+# driver code
 class studentRecord:
     def __init__(self):
         self.record = {}
@@ -27,6 +28,7 @@ class studentRecord:
         print("----------")
 sr = studentRecord()
 
+# main code
 print("-----WELCOME-----")
 while True:
     print()
