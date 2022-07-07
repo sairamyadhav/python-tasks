@@ -23,7 +23,7 @@ class studentRecord:
             return
         print("----------")
         for i in self.record:
-            print(i, str(self.record[i]) + "in feets)
+            print(i, str(self.record[i]) + "in feets")
             print()
         print("----------")
     def deleteRecord(self, name):
