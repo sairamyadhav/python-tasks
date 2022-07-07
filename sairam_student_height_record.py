@@ -26,15 +26,19 @@ class studentRecord:
             print(i, self.record[i])
             print()
         print("----------")
+    def deleteRecord(self, name):
+        if name not in self.record:
+            print("no record found")
+        else:
+            del self.record[name]
 sr = studentRecord()
 
-# main code
 print("-----WELCOME-----")
 while True:
     print()
     print("please choose from below options")
     print()
-    print("1 - add new record\n2 - search record\n3 - view all records\n4 - exit")
+    print("1 - add new record\n2 - search record\n3 - view all records\n4 - delete record\n4 - exit")
     print()
     try:
         inp = int(input("ENTER -> "))
@@ -50,7 +54,7 @@ while True:
             print("1 - in cms\n2 - in inches\n3 - in feet\n")
             try:
                 inpu = int(input("choose -> "))
-                if inpu < 1 or height > 3:
+                if inpu < 1 or inpu > 3:
                     raise Exception
                 height = float(input("enter height -> "))
                 if height < 1:
@@ -77,6 +81,19 @@ while True:
         elif inp == 3:
             sr.viewRecords()
         elif inp == 4:
+            name = input("enter name -> ")
+            if len(name) < 1:
+                print()
+                print("invalid input")
+                print()
+                break
+            if name.isalpha() == False:
+                print()
+                print("invalid input")
+                print()
+                break
+            sr.deleteRecord(name)
+        elif inp == 5:
             break
         else:
             print()
