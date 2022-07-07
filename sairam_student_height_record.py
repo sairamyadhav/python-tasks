@@ -23,7 +23,7 @@ class studentRecord:
             return
         print("----------")
         for i in self.record:
-            print(i, self.record[i])
+            print(i, str(self.record[i]) + "in feets)
             print()
         print("----------")
     def deleteRecord(self, name):
@@ -38,7 +38,7 @@ while True:
     print()
     print("please choose from below options")
     print()
-    print("1 - add new record\n2 - search record\n3 - view all records\n4 - delete record\n4 - exit")
+    print("1 - add new record\n2 - search record\n3 - view all records\n4 - delete record\n5 - exit")
     print()
     try:
         inp = int(input("ENTER -> "))
