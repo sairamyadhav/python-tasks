@@ -57,14 +57,19 @@ while True:
                 if inpu < 1 or inpu > 3:
                     raise Exception
                 height = float(input("enter height -> "))
-                if height < 1:
-                    raise Exception
                 if inpu == 1:
                     height = height * 0.0328084
                 elif inpu == 2:
                     height = height * 0.0833333
                 elif inpu == 3:
                     height = height
+                if height < 1:
+                    raise Exception
+                if height > 10:
+                    print()
+                    print("you aren't great khali, mention your height")
+                    print()
+                    break
                 sr.addRecord(name, height)
             except Exception:
                 print("invalid input")
